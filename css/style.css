@@ -8,8 +8,10 @@ header {
   border-bottom: 1px solid black;
 }
 .container {
-  width: 850px;
-  height: 450px;
+  /* width: 850px; */
+  width: fit-content;
+  /* height: 450px; */
+  height: fit-content;
   border: 1px solid black;
   margin: 50px auto;
   position: relative;
@@ -20,14 +22,20 @@ button {
   font-size: larger;
   position: absolute;
   top: calc(50% - (20px / 2));
+  /* left: 0; */
   border: none;
 }
-button:hover, .circle:hover {
-  background-color: darkgray;
+button:hover,
+.circle:hover {
+  background-color: #717171;
   cursor: pointer;
 }
-.next {
-  right: 0;
+ #previous{
+
+  left: 0px;
+}
+ #next {
+  right: 0px;
 }
 .circles-container {
   width: fit-content;
@@ -43,10 +51,25 @@ button:hover, .circle:hover {
   border: 1px solid black;
   border-radius: 50%;
   margin-inline: 0.4em;
+  background-color: #bbb;
 }
 .slideshow-container {
   border: 1px solid black;
   width: calc(100% - 80px);
   height: calc(100% - 40px);
-  margin:  10px auto;
+  margin: auto;
+}
+.slide {
+  width: fit-content;
+  height: fit-content;
+  display: none;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.active {
+  background-color: #717171;
 }
