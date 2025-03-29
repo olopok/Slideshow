@@ -4,11 +4,11 @@ const next = document.querySelector("#next");
 const prev = document.querySelector("#previous");
 const slides = document.querySelectorAll(".slide");
 const circles = document.querySelectorAll(".circle");
+
 let slideIndex = 1;
+
 showSlide(slideIndex);
-// window.addEventListener("load", () => {
-//   showSlide(slideIndex);
-// });
+
 next.addEventListener("click", () => {
   slideIndex += 1;
   showSlide(slideIndex);
@@ -34,4 +34,10 @@ function showSlide(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   circles[slideIndex - 1].className += " active";
+  setTimeout(autoShow, 10000);
+}
+
+function autoShow() {
+  slideIndex++;
+  showSlide(slideIndex);
 }
